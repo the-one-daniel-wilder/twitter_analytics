@@ -1,6 +1,6 @@
 # Twitter Analytics
 
-Twitter Analytics is a program to provide statistics information on tweets.  
+Twitter Analytics downloads and statistically analyzes the frequency of tweets coming from a particular account.  
 
 The program is designed to aid in playing the 'PredictIt' political stock market. Tweet Analysis grabs tweet meta-data from the Twitter API and stores it in a Yaml file. It can then analyze tweet frequency using functions for statistics and averages.  
 
@@ -37,7 +37,7 @@ actual_day(first_day)
 actual_week(start_date)  
 actual_range(date1, date2)  
 average_day_of_week(offset, count)  
-average_week(offset, range)  
+average_week(offset, range)   
 average_all_days(count)  
 
 ## EXAMPLES  
