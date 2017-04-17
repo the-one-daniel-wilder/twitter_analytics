@@ -43,7 +43,7 @@ end
 class Time
   DAY = 86400
   def self.stamp(month, day, hour=nil, minute=nil)
-    Time.new(2017, month, day, hour, minute) #timestamp = Time.stamp(m, d, h, m)
+    Time.new(2017, month, day, hour, minute)
   end
 
   def self.noon(offset = 0, time_zone = -3)

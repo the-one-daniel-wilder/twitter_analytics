@@ -17,7 +17,7 @@ class Tweet
   attr_reader :time, :id
 
   def initialize(time, id)
-    @time = time #unless time.class != Time
+    @time = time
     @id = id
   end
 

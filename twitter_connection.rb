@@ -18,6 +18,7 @@ class TwitterConnection
     # @since = tweets.last.id
   end
 
+
   private
 
   def convert_tweets(list)

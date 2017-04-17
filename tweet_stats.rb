@@ -4,8 +4,7 @@ module TweetStats
 
   def actual_day(day = 0, simple = false)
     day = parse_time(day)
-    raise 'please input a day||offset' if day >= Time.new
-
+    
     matches = @tweets.select { |tweet| day.day == tweet.day && day.month == tweet.month }.sort_by &:time
 
     unless simple
@@ -90,11 +89,11 @@ module TweetStats
 
   def format_duration(time)
     if time < 3600
-      "#{time / 60} minutes"
+      "#{time.to_i / 60} minutes"
     elsif time < 86400
-      "#{time / 3600} hours #{format_time(time % 3600)}"
+      "#{time.to_i / 3600} hours #{format_duration(time % 3600)}"
     else
-      "#{time / DAY} days #{format_time(time % DAY)}"
+      "#{time.to_i / DAY} days #{format_duration(time % DAY)}"
     end
   end
 
