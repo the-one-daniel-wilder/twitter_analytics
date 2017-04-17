@@ -1,9 +1,9 @@
-# Tweet Analysis
+# Twitter Analytics
 
-Tweet Analysis is a program to provide statistics information on tweets.
+Twitter Analytics calculates statistics about tweet times and frequencies.
 
-The program is designed to aid in prediction of when new tweets will be released and to analyze previous patterns.
-Tweet Analysis grabs tweet meta-data from the Twitter API and stores it in a Yaml file. It can then analyze tweet frequency using functions for statistics and averages.
+Twitter Analytics is designed to aid in prediction of when new tweets will be released and to analyze previous patterns.
+First select the account you want to track. Connect to the Twitter API. TA will grab tweet meta-data from the API and store it in a local Yaml file. You can then analyze tweet frequency using functions for statistics and averages.
 
 -----------------------------------------------------------------------------------------------
 
@@ -47,12 +47,12 @@ Includes Tweet class and Account class with nested modules of analytic functiona
 
 #connect to donald trump's twitter
 
-  tc = TwitterConnection.new('realDonaldTrump')
+  TwitterConnection.new('realDonaldTrump')
   rdt = Account.new("realDonaldTrump", YAML.load_file('realDonaldTrump.yml'))  
 
 #connect to vp's twitter
 
-  tc2 = TwitterConnection.new 'vp'
+  TwitterConnection.new 'vp'
   vp = Account.new 'vp'  
 
 
