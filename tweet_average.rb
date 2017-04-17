@@ -74,7 +74,7 @@ module TweetAverage
     #return error if there is no tweet data for that time period
     average_tweets = [Time.new.strftime('%A')]
     0.upto 6 do |i|
-      average_tweets << average_day_of_week(offset = i, @range, simple)
+      average_tweets << average_day_of_week(i, 1)
     end
     average_tweets
   end
