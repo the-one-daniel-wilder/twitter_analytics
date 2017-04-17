@@ -1,4 +1,3 @@
-# account < twitter < tweet < tweet_stats < tweet_average < tweet_forecast
 require ./twitter.rb
 require ./tweets.rb
 require ./tweet_stats.rb
@@ -16,15 +15,18 @@ class Account
   include TweetForecast
 
   attr_reader :name, :tweets
+  attr_accessor :range
 
   def initialize(name='realDonaldTrump', tweets=nil)
     @name = name
     tweets ||= YAML.load_file("#{@name}.yml")
+
     @tweets = tweets
+    @range = ((Time.new - tweets.last.time) / WEEK).to_i
   end
 
   def self.help
-    puts "commands include: actual_day(first_day), actual_week(start_date), actual_range(date1, date2), average_day_of_week(offset, count), average_week(offset, range), average_all_days(count), tweets_to_doc(num)"
+    puts "commands include: actual_day(first_day), actual_week(start_date), actual_range(date1, date2), average_day_of_week(offset), average_week(offset, range), average_all_days, tweets_to_doc(num)"
   end
 
   def yaml

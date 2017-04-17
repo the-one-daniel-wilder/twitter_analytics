@@ -63,6 +63,7 @@ module TweetStats
 
 
   private
+
   def parse_time(time_or_offset)
     if time_or_offset.is_a? Fixnum
       Time.new + (DAY * time_or_offset)
@@ -84,6 +85,16 @@ module TweetStats
       "noon"
     else
       "#{time.hour}:#{"%02d" % time.min}"
+    end
+  end
+
+  def format_duration(time)
+    if time < 3600
+      "#{time / 60} minutes"
+    elsif time < 86400
+      "#{time / 3600} hours #{format_time(time % 3600)}"
+    else
+      "#{time / DAY} days #{format_time(time % DAY)}"
     end
   end
 
