@@ -1,9 +1,8 @@
+# account < twitter < tweet < tweet_stats < tweet_average < tweet_forecast
 require ./twitter.rb
 require ./tweets.rb
 require ./tweet_stats.rb
 require ./tweet_average.rb
-require ./tweet_deviation.rb
-require ./tweet_forecast.rb
 
 require 'yaml'
 require 'twitter'
@@ -11,8 +10,6 @@ require 'twitter'
 class Account
   include TweetStats
   include TweetAverage
-  include TweetDeviation
-  include TweetForecast
 
   attr_reader :name, :tweets
   attr_accessor :range
@@ -43,7 +40,7 @@ end
 class Time
   DAY = 86400
   def self.stamp(month, day, hour=nil, minute=nil)
-    Time.new(2017, month, day, hour, minute)
+    Time.new(2017, month, day, hour, minute) #timestamp = Time.stamp(m, d, h, m)
   end
 
   def self.noon(offset = 0, time_zone = -3)
