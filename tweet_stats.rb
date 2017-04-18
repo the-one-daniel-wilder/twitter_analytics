@@ -4,7 +4,7 @@ module TweetStats
 
   def actual_day(day = 0, simple = false)
     day = parse_time(day)
-    
+
     matches = @tweets.select { |tweet| day.day == tweet.day && day.month == tweet.month }.sort_by &:time
 
     unless simple
