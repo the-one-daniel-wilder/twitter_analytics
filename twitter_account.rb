@@ -3,8 +3,6 @@ require ./twitter.rb
 require ./tweets.rb
 require ./tweet_stats.rb
 require ./tweet_average.rb
-require ./tweet_deviation.rb
-require ./tweet_forecast.rb
 
 require 'yaml'
 require 'twitter'

@@ -85,3 +85,10 @@ Includes Tweet class and Account class with nested modules of analytic functiona
 #see average tweets for each day of the week
 
   vp.average_all_days
+
+-----------------------------------------------------------------------------------------------
+
+# DEPENDENCIES
+
+twitter
+yaml

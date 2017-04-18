@@ -27,10 +27,10 @@ class TwitterConnection
 
   def client_access
     Twitter::REST::Client.new do |config|
-      config.consumer_key        = "vJAwBD7ffyXMKtTe24LMPIA90"
-      config.consumer_secret     = "TKWrI5ctEZ4a2Amw4Ks7WNGMdsGsWfylkatt4y5k1g0UECenjs"
-      config.access_token        = "180542222-RyJ1oOMUsttp6epfKJAmMRJlrBwZm55orKFCfNqI"
-      config.access_token_secret = "90xcQjmVwLw5HORcXzJ7ZExOAlKSgQHQHnJZttSGMZUU7"
+      config.consumer_key        = "[redacted]"
+      config.consumer_secret     = "[redacted]"
+      config.access_token        = "[redacted]"
+      config.access_token_secret = "[redacted]"
     end
   end
 
