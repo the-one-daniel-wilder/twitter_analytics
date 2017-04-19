@@ -1,4 +1,4 @@
-# account < twitter < tweet < tweet_stats < tweet_average < tweet_forecast
+# account < twitter < tweet < tweet_stats < tweet_average
 require ./twitter.rb
 require ./tweets.rb
 require ./tweet_stats.rb

@@ -15,7 +15,6 @@ class TwitterConnection
     tweets_raw = @client.user_timeline(@account, count: num)
     tweets = convert_tweets(tweets_raw)
     File.write("#{@account}.yml", YAML.dump(tweets))
-    # @since = tweets.last.id
   end
 
 
