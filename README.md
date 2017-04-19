@@ -1,4 +1,4 @@
-![TA_logo](https://cloud.githubusercontent.com/assets/22918854/25199965/79fd0fb0-2501-11e7-9249-fadbbb2b2239.png)
+![TA_logo](https://cloud.githubusercontent.com/assets/22918854/25200633/e179b16e-2503-11e7-97ed-699f85330d1f.png)
 
 # Twitter Analytics
 
