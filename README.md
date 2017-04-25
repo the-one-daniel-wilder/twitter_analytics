@@ -5,7 +5,7 @@
 Twitter Analytics calculates statistics about tweet times and frequencies.
 
 Twitter Analytics is designed to aid in prediction of when new tweets will be released and to analyze previous patterns.
-First select the account you want to track. Connect to the Twitter API. TA will grab tweet meta-data from the API and store it in a local Yaml file. You can then analyze tweet frequency using functions for statistics and averages.
+First select the account you want to track. Connect to the Twitter API. TA will grab tweet meta-data from the API and store it in a local Yaml file. You can then analyze tweet frequency offline using functions for statistics and averages.
 
 -----------------------------------------------------------------------------------------------
 
@@ -64,8 +64,8 @@ Includes Tweet class and Account class with nested modules of analytic functiona
 
 #see tweets in a range from April 5th 1:28am until 2 days ago at noon
 
-  this = Time.stamp(4, 5, 1, 28)
-  that = Time.noon(-2)
+  this = Time.stamp(4, 5, 1, 28)  
+  that = Time.noon(-2)  
   rdt.actual_range(this, that, 1)  
 
 #see the average number of tweets on the day of the week which was one day ago

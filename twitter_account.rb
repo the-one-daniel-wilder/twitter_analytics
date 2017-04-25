@@ -1,21 +1,19 @@
-# account < twitter < tweet < tweet_stats < tweet_average
-require ./twitter.rb
-require ./tweets.rb
-require ./tweet_stats.rb
-require ./tweet_average.rb
-
-require 'yaml'
-require 'twitter'
+require './tweets'
+require './tweet_stats'
+require './tweet_average'
+require './twitter_account'
+require './twitter_connection'
 
 class Account
-  include TweetStats
-  include TweetAverage
+  extend TweetStats
+  extend TweetAverage
 
   attr_reader :name, :tweets
   attr_accessor :range
 
   def initialize(name='realDonaldTrump', tweets=nil)
     @name = name
+    TwitterConnection.new(name)
     tweets ||= YAML.load_file("#{@name}.yml")
 
     @tweets = tweets
@@ -23,7 +21,7 @@ class Account
   end
 
   def self.help
-    puts "commands include: actual_day(first_day), actual_week(start_date), actual_range(date1, date2), average_day_of_week(offset), average_week(offset, range), average_all_days, tweets_to_doc(num)"
+    puts "commands include: actual_day(first_day), actual_week(start_date), actual_range(date1, date2), average_day_of_week(offset), average_week(offset, range), average_all_days, TwitterConnection.new(account)"
   end
 
   def yaml
@@ -31,7 +29,7 @@ class Account
   end
 
   def count
-    @tweets.count || 'please #update via your Twitter connection'
+    @tweets.count || 'please update via TwitterConnection.new(account)'
   end
 
 end

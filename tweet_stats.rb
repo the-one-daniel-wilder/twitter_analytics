@@ -61,7 +61,7 @@ module TweetStats
   end
 
 
-  private
+  protected
 
   def parse_time(time_or_offset)
     if time_or_offset.is_a? Fixnum
@@ -70,6 +70,8 @@ module TweetStats
       time_or_offset
     end
   end
+
+  private
 
   def format_date(time)
     if time.month == Time.new.month && time.day == Time.new.day

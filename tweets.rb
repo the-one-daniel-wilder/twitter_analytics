@@ -1,3 +1,4 @@
+
 class Tweet
 
   def self.help
@@ -8,10 +9,6 @@ class Tweet
   def self.create(month, day, hour, minute)
    time = Time.stamp(month, day, hour||=12, minute||=0)
    Tweet.new(time)
-  end
-
-  def self.import_tweet
-
   end
 
   attr_reader :time, :id
