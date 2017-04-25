@@ -13,13 +13,13 @@ class TwitterConnection
     tweets = convert_tweets(tweets_raw)
     tweets = tweets.sort_by &:time
 
-    if File.exist?("./#{@account}.yml")
+    # if File.exist?("./#{@account}.yml")
       # since = YAML.load_file("#{@account}.yml").last.time
       # tweets = tweets.select {|tweet| tweet.time > since}
       # File.write("#{@account}.yml", YAML.dump(tweets), IO::SEEK_SET)
     # else
       File.write("#{@account}.yml", YAML.dump(tweets))
-    end
+    # end
 
   end
 
