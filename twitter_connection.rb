@@ -17,7 +17,7 @@ class TwitterConnection
       # since = YAML.load_file("#{@account}.yml").last.time
       # tweets = tweets.select {|tweet| tweet.time > since}
       # File.write("#{@account}.yml", YAML.dump(tweets), IO::SEEK_SET)
-    else
+    # else
       File.write("#{@account}.yml", YAML.dump(tweets))
     end
 
