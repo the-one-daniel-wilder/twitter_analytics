@@ -2,10 +2,11 @@
 
 # Twitter Analytics
 
-Twitter Analytics calculates statistics about tweet times and frequencies.
+Twitter Analytics calculates statistics about tweet times and frequencies.*
 
-Twitter Analytics is designed to aid in prediction of when new tweets will be released and to analyze previous patterns.
-First select the account you want to track. Connect to the Twitter API. TA will grab tweet meta-data from the API and store it in a local Yaml file. You can then analyze tweet frequency offline using functions for statistics and averages.
+Twitter Analytics is designed to analyze previous tweet patterns and assist in making predictions about future times and frequencies. It is a program written in Ruby, with functionality to interact with and grab metadata from the www.Twitter.com API.
+
+First select the account you want to track. Connect to the Twitter API. TA will grab tweet meta-data from the API and store it in a local Yaml file. You can then analyze tweet frequency offline using functions for statistics and averages.*
 
 -----------------------------------------------------------------------------------------------
 
@@ -94,3 +95,6 @@ Includes Tweet class and Account class with nested modules of analytic functiona
 
 twitter
 yaml
+
+
+*This version on GitHub is the basic version of the Twitter Analytics program, provided to the public for free. For information about the advanced program or to purchase access, message Daniel.
