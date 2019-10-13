@@ -90,7 +90,7 @@ Includes Tweet class and Account class with nested modules of analytic functiona
 
 -----------------------------------------------------------------------------------------------
 
-# DEPENDENCIES
+# GEM DEPENDENCIES
 
 twitter
 yaml
